@@ -7,7 +7,7 @@ function Projects() {
 
     const myProjects = [
         {
-            img: "https://user-images.githubusercontent.com/45580434/86777054-1665fd00-c02f-11ea-93c3-3cdc4e9b0ae9.png",
+            img: "https://user-images.githubusercontent.com/45580434/86958986-69c17380-c133-11ea-8bee-ad0efbee59e8.gif",
             title: "Spotenu",
             subtitle: "Full-Stack",
             text1: "Projeto que visa facilitar o acesso a músicas pelo mundo.",
