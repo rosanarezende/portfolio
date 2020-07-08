@@ -1,21 +1,16 @@
 import React from "react"
 
-import { 
-    ProjectsContainer,
-    Title, Project, Image, 
-    Model01, Model02, 
-    ProjectTitle, Subtitle, Text, Button, ExternalLink, Bold
-} from "./styles"
+import { ProjectsContainer, Title, Project, Image, Model01, Model02, ProjectTitle, Subtitle, Text, Button, ExternalLink } from "./styles"
+import IconDown from "../../components/IconDown"
 
-function Projects(){
+function Projects() {
 
     const myProjects = [
         {
             img: "https://user-images.githubusercontent.com/45580434/86958986-69c17380-c133-11ea-8bee-ad0efbee59e8.gif",
             title: "Spotenu",
             subtitle: "Full-Stack",
-            text1: "O Spotenu é um projeto que visa facilitar o acesso a músicas pelo mundo.",
-            text2: "No front-end: HTML, CSS, Javascript, Node, React, Redux, Redux-Thunk, React Router, Material UI, Styled-components, Formulários com validação, Autenticação e autorização, Teste unitário, de lógica e de componentes, Responsividade e adaptação de aplicação web para front. No backend: Node, Typescript, Arquitetura MVC, MySQL, Knex, Express, Dotenv, UUID, Bcryptjs, Jsonwebtoken, Jest. Infraestrutura: Serviços Cloud AWS (EC2 - para o banco de dados | Lambda e API Gateway - para o banckend), Surge.sh (para o front).",
+            text1: "Projeto que visa facilitar o acesso a músicas pelo mundo.",
             cor: "#f2c12e",
             repositorio: "https://github.com/rosanarezende/Labenu-Projeto-FullStack",
             deploy: "http://spotenu.surge.sh/"
@@ -25,7 +20,6 @@ function Projects(){
             title: "iFuture",
             subtitle: "Front-end",
             text1: "Plataforma de delivery online.",
-            text2: "HTML, CSS, Javascript, Node, React, Redux, Redux-Thunk, React Router, Material UI, Styled-components, Formulários com validação, Autenticação e autorização, Teste unitário, de lógica e de componentes, Responsividade e adaptação de aplicação web para front.",
             cor: "#d9a87e",
             repositorio: "https://github.com/rosanarezende/Labenu-Projeto-FrontEnd-iFuture",
             deploy: "http://ifuture-sagan.surge.sh/"
@@ -43,8 +37,7 @@ function Projects(){
             img: "https://user-images.githubusercontent.com/45580434/86777054-1665fd00-c02f-11ea-93c3-3cdc4e9b0ae9.png",
             title: "LaBook",
             subtitle: "Backend-end",
-            text1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ipsa minima sit atque illo, totam facilis pariatur accusantium voluptatum ut rem sint, necessitatibus voluptas a cupiditate mollitia? Quasi, magni quisquam?",
-            text2: "hahauihaia huahauhauilç dldldflfplf´f hsdhdjdkdld",
+            text1: "Rede social baseada no Facebook.",
             cor: "#f2c12e",
             repositorio: "https://github.com/rosanarezende/Labenu-Projeto-BackEnd-LaBook"
         }
@@ -52,63 +45,40 @@ function Projects(){
 
     return (
         <>
-            <ProjectsContainer>
+            <ProjectsContainer id="projects">
                 <Title>Meus projetos</Title>
 
                 {myProjects.map((item, index) => {
-                    let model
-                    if(index % 2 === 0){
-                        model = (<Project>
-                                <Image
-                                    src={item.img}
-                                    alt="Project"
-                                />
-                                <Model01>
-                                    <ProjectTitle>{item.title}</ProjectTitle>
-                                    <Subtitle>{item.subtitle}</Subtitle>
-                                    <Text>{item.text1}</Text>
-                                    {item.text2 && <Text><Bold>Principais linguagens, tecnologias e ferramentas utilizadas:</Bold><br/> {item.text2}</Text>}
-                                    {item.deploy && <ExternalLink href={item.deploy} target="_blank" rel="noopener noreferrer">Deploy</ExternalLink>}
-                                    <Button cor={item.cor}>
-                                        <ExternalLink href={item.repositorio} target="_blank" rel="noopener noreferrer" cor="#ffff">
-                                            ver no GitHub
-                                        </ExternalLink>
-                                    </Button>
-                                </Model01>
-                            </Project>)
+                    if (index % 2 === 0) {
+                        return (<Project key={index}>
+                            <Image src={item.img} alt="Project"/>
+                            <Model01>
+                                <ProjectTitle>{item.title}</ProjectTitle>
+                                <Subtitle>{item.subtitle}</Subtitle>
+                                <Text>{item.text1}</Text>
+                                {item.deploy && <ExternalLink href={item.deploy} target="_blank" rel="noopener noreferrer">Deploy</ExternalLink>}
+                                <Button cor={item.cor} onClick={() => window.open(item.repositorio, '_blank')}>ver no GitHub</Button>
+                            </Model01>
+                        </Project>)
                     }
                     else {
-                        model = (<Project direcao="column">
-                                <Model02>
-                                    <ProjectTitle>{item.title}</ProjectTitle>
-                                    <Subtitle>{item.subtitle}</Subtitle>
-                                    <Text>{item.text1}</Text>
-                                    {item.text2 && <Text><Bold>Principais linguagens, tecnologias e ferramentas utilizadas:</Bold><br/> {item.text2}</Text>}
-                                    {item.deploy && <ExternalLink href={item.deploy} target="_blank" rel="noopener noreferrer">Deploy</ExternalLink>}
-                                    <Button cor={item.cor}>
-                                        <ExternalLink href={item.repositorio} target="_blank" rel="noopener noreferrer" cor="#ffff">
-                                            ver no GitHub
-                                        </ExternalLink>
-                                    </Button>
-                                </Model02>
-                                <Image
-                                    src={item.img}
-                                    alt="Project"
-                                />
-                            </Project>)
+                        return (<Project direcao="column" key={index}>
+                            <Model02>
+                                <ProjectTitle>{item.title}</ProjectTitle>
+                                <Subtitle>{item.subtitle}</Subtitle>
+                                <Text>{item.text1}</Text>
+                                {item.deploy && <ExternalLink href={item.deploy} target="_blank" rel="noopener noreferrer">Deploy</ExternalLink>}
+                                <Button cor={item.cor} onClick={() => window.open(item.repositorio, '_blank')}>ver no GitHub</Button>
+                            </Model02>
+                            <Image src={item.img} alt="Project"/>
+                        </Project>)
                     }
-
-                    return model
                 })}
 
-                <div>
-                    <Button cor="#60a080">
-                        <ExternalLink href="https://github.com/rosanarezende" target="_blank" rel="noopener noreferrer" cor="#ffff">
-                            mais projetos
-                        </ExternalLink>
-                    </Button>
-                </div>
-
+                <Button cor="#60a080" onClick={() => window.open('https://github.com/rosanarezende', '_blank')}>
+                    mais projetos
+                </Button>
+                <IconDown link="#hireme"/>
             </ProjectsContainer>
         </>
     )

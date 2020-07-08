@@ -2,7 +2,6 @@ import styled from "styled-components"
 
 export const BottonbarContainer = styled.div`
     height: 10vh;
-    width: 100vw;
     margin: 0;
     background-color: #f2c12e;
     display: flex;

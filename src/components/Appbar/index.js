@@ -1,31 +1,27 @@
-import React, {useState} from "react"
+import React, { useState } from "react"
 
-import { AppBarStyled, Logo, DivGrow, SectionDesktop, SectionMobile, ButtonsContainer, LinkStyled } from "./styles"
+import { AppBarStyled, Logo, DivGrow, SectionDesktop, SectionMobile, LinksContainer, LinkStyled } from "./styles"
 import { Toolbar, IconButton, Menu } from "@material-ui/core"
 import MenuIcon from '@material-ui/icons/Menu';
 
-function Appbar(){
-    // const [anchorEl, setAnchorEl] = useState(null)
+function Appbar() {
     const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null)
-
     const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
 
-    let buttons = <ButtonsContainer>
+    let links = <LinksContainer>
         <LinkStyled href="#about">quem sou</LinkStyled>
-        <LinkStyled href="/">projetos</LinkStyled>
-        <LinkStyled href="/">contato</LinkStyled>
-    </ButtonsContainer>
+        <LinkStyled href="#knowledge">conhecimentos</LinkStyled>
+        <LinkStyled href="#education">educação</LinkStyled>
+        <LinkStyled href="#projects">projetos</LinkStyled>
+        <LinkStyled href="#hireme">contato</LinkStyled>
+    </LinksContainer>
 
-    const handleMobileMenuOpen = (event) => {
-        setMobileMoreAnchorEl(event.currentTarget);
-    };
+    const handleMobileMenuOpen = (event) => { setMobileMoreAnchorEl(event.currentTarget) }
 
-    const handleMobileMenuClose = () => {
-        setMobileMoreAnchorEl(null);
-    };
+    const handleMobileMenuClose = () => { setMobileMoreAnchorEl(null) }
 
-    const mobileMenuId = 'primary-search-account-menu-mobile';
-    const renderMobileMenu = 
+    const mobileMenuId = 'primary-search-account-menu-mobile'
+    const renderMobileMenu =
         <Menu
             anchorEl={mobileMoreAnchorEl}
             anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
@@ -35,27 +31,27 @@ function Appbar(){
             open={isMobileMenuOpen}
             onClose={handleMobileMenuClose}
         >
-            {buttons}
+            {links}
         </Menu>
 
     return (
         <AppBarStyled color="transparent">
             <Toolbar>
-                <Logo 
-                    src="https://user-images.githubusercontent.com/45580434/86594186-f53cd800-bf6c-11ea-9868-bdb10d9083f6.png" 
+                <LinkStyled href="#home"><Logo
+                    src="https://user-images.githubusercontent.com/45580434/86594186-f53cd800-bf6c-11ea-9868-bdb10d9083f6.png"
                     alt="logo"
-                />
-                <DivGrow/>
-                <SectionDesktop>{buttons}</SectionDesktop>
+                /></LinkStyled>
+                <DivGrow />
+                <SectionDesktop>{links}</SectionDesktop>
                 <SectionMobile>
                     <IconButton
-                            aria-label="show more"
-                            aria-controls={mobileMenuId}
-                            aria-haspopup="true"
-                            onClick={handleMobileMenuOpen}
-                            color="primary"
-                        >
-                            <MenuIcon color="secondary"/>
+                        aria-label="show more"
+                        aria-controls={mobileMenuId}
+                        aria-haspopup="true"
+                        onClick={handleMobileMenuOpen}
+                        color="primary"
+                    >
+                        <MenuIcon color="secondary" />
                     </IconButton>
                 </SectionMobile>
             </Toolbar>
