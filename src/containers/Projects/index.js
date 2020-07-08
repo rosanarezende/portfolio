@@ -11,7 +11,7 @@ function Projects(){
 
     const myProjects = [
         {
-            img: "https://user-images.githubusercontent.com/45580434/86523046-d9d2af80-be3c-11ea-8c6a-cd072f9cd4d6.gif",
+            img: "https://user-images.githubusercontent.com/45580434/86958986-69c17380-c133-11ea-8bee-ad0efbee59e8.gif",
             title: "Spotenu",
             subtitle: "Full-Stack",
             text1: "O Spotenu é um projeto que visa facilitar o acesso a músicas pelo mundo.",
