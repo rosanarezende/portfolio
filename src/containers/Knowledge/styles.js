@@ -1,20 +1,19 @@
 import styled from "styled-components"
 
 export const KnowledgeContainer = styled.div`
-    height: 72vh;
-    width: 100vw;
+    min-height: 72vh;
     margin: 0;
-    padding: 5vh 20vw;
+    padding: 8vh 20vw 6vh;
     background-color: #04c0ad;
     color: #ffffff;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    position: relative;
+    
     @media screen and (max-device-width: 1200px){
-        padding: 0 5vw;
+        padding: 8vh 5vw 6vh;
     }
 `
 
@@ -38,7 +37,8 @@ export const KnowledgeContent = styled.div`
 export const Type = styled.div`
     display: flex;
     flex-direction: column;
-    width: 40%;
+    align-items: center;
+    width: 45%;
     @media screen and (max-device-width: 1200px){
         width: 100%;
         margin: 2.5vh 0;
@@ -49,16 +49,40 @@ export const SubTitle = styled.div`
     font-size: 5em;
     font-weight: bold;
     margin-bottom: 3.5vh;
+    text-align: center;
     @media screen and (max-device-width: 1200px){
         margin-bottom: 2vh;
         font-size: 2em;
     }
 `
 
-export const Text = styled.div`
-    font-size: 1.5em;
-    margin-bottom: 1.5vh;
+export const WordsContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+`
+
+export const Word = styled.button`
+    width: auto;
+    padding: 0 1vw;
+    margin: 1vh 1vw;
+
+    outline: 0;
+    background: #ffff;
+    color: #5a3b3b;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    height: 3vh;
+
+    &:hover {
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.9);
+        font-weight: bold;
+    }
+
     @media screen and (max-device-width: 1200px){
-        font-size: 1em;
+        font-size: 0.9em;
+        padding: 0 2vw;
     }
 `

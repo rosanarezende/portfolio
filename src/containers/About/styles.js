@@ -1,23 +1,23 @@
 import styled from "styled-components"
 
 export const AboutContainer = styled.div`
-    height: 75vh;
-    width: 100vw;
+    min-height: 75vh;
     margin: 0;
     background-color: #f2c12e;
     display: flex;
-    padding: 5vh 20vw;
+    padding: 8vh 15vw 6vh;
     color: #5a3b3b;
+    position: relative;
 
     @media screen and (max-device-width: 1200px){
-        padding: 0 5vw;
+        padding: 8vh 5vw 4vh;
     }
 `
 
 export const AboutContent = styled.div`
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    width: 45vw;
     justify-content: center;
     margin-right: 4vw;
 
@@ -38,9 +38,8 @@ export const AboutTitle = styled.p`
 `
 
 export const AboutText = styled.div`
-    display: flex;
     font-size: 1.5em;
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
     text-align: justify;
 
     @media screen and (max-device-width: 1200px){
@@ -48,10 +47,19 @@ export const AboutText = styled.div`
     }
 `
 
+export const Underline = styled.span`
+    text-decoration: underline;
+    font-style:italic;
+`
+
+export const Bold = styled.span`
+    font-weight: bold;
+`
+
 export const WordsContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 4vh;
+    margin: 4vh 0;
 `
 
 export const Separator = styled.span`
@@ -90,13 +98,14 @@ export const CVButton  = styled.button`
 
     @media screen and (max-device-width: 1200px){
         font-size: 1em;
-        width: 30vw;
+        width: auto;
+        padding: 0 5vw;
     }
 `
 
 
 export const ImageContent = styled.div`
-    width: 25vw;
+    width: 18vw;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -7,8 +7,11 @@ export const LinkIconDown = styled.a`
     text-decoration: none;
     color: #5a3b3b;
     position: absolute;
-    bottom: 1vh;
-    left: 45vw;
+    bottom: 0.5vh;
+    left: 50vw;
+    @media screen and (max-device-width: 1200px){
+        left: 45vw;
+    }
 `
 
 export const BigExpandMore = styled(ExpandMore)`

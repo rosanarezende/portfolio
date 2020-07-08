@@ -10,6 +10,7 @@ export const AppBarStyled = styled(AppBar)`
 
 export const Logo = styled.img`
     height: 6.5vh;
+    margin-top: 1vh;
     filter: brightness(5);
     cursor: pointer;
 `
@@ -35,7 +36,7 @@ export const SectionMobile = styled.div`
     }
 `
 
-export const ButtonsContainer = styled.div`
+export const LinksContainer = styled.div`
     display: flex;
     align-items: center;
 
@@ -51,14 +52,13 @@ export const LinkStyled = styled.a`
     font-size: 1.5em;
     margin-left: 2vw;
 
-    /* :hover, :link, :visited, :active{
-       color: "white" 
-    } */
-    &:hover {
+    &:hover, &:active {
         color: whitesmoke; 
     }
 
     @media screen and (max-device-width: 1200px){
         font-size: 1em;
+        margin: 1vh 1vw;
+        padding: 1vh 1vw;
     }
 `
