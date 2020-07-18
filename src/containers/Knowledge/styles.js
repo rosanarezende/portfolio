@@ -17,7 +17,7 @@ export const KnowledgeContainer = styled.div`
     }
 `
 
-export const Title = styled.div`
+export const Title = styled.h2`
     font-size: 3.5em;
     margin-bottom: 7vh;
     @media screen and (max-device-width: 1200px){
@@ -45,7 +45,7 @@ export const Type = styled.div`
     }
 `
 
-export const SubTitle = styled.div`
+export const SubTitle = styled.h3`
     font-size: 5em;
     font-weight: bold;
     margin-bottom: 3.5vh;

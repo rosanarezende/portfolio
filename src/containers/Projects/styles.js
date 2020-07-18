@@ -9,7 +9,7 @@ export const ProjectsContainer = styled.div`
     justify-content: center;
     color: #5a3b3b;
     padding: 8vh 20vw;
-    background-color: #FBFCFD;
+    background-color: #F9FAFA;
     position: relative;
 
     @media screen and (max-device-width: 1200px){
@@ -18,7 +18,7 @@ export const ProjectsContainer = styled.div`
     }
 `
 
-export const Title = styled.div`
+export const Title = styled.h2`
     font-size: 5em;
     margin-bottom: 8vh;
     @media screen and (max-device-width: 1200px){
@@ -72,7 +72,7 @@ export const Model02 = styled.div`
     }
 `
 
-export const ProjectTitle = styled.div`
+export const ProjectTitle = styled.h3`
     font-size: 4.5em;
     font-weight: bold;
     @media screen and (max-device-width: 1200px){
@@ -80,7 +80,7 @@ export const ProjectTitle = styled.div`
     }
 `
 
-export const Subtitle = styled.div`
+export const Subtitle = styled.h4`
     font-size: 3em;
     margin-bottom: 2.5vh;
     @media screen and (max-device-width: 1200px){
@@ -89,7 +89,7 @@ export const Subtitle = styled.div`
     }
 `
 
-export const Text = styled.div`
+export const Text = styled.p`
     font-size: 1.5em;
     margin-bottom: 1vh;
     @media screen and (max-device-width: 1200px){

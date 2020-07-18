@@ -27,7 +27,7 @@ export const AboutContent = styled.div`
     }
 `
 
-export const AboutTitle = styled.p`
+export const AboutTitle = styled.h2`
     font-size: 4em;
     font-weight: bold;
     margin-bottom: 3.5vh;
@@ -37,7 +37,7 @@ export const AboutTitle = styled.p`
     }
 `
 
-export const AboutText = styled.div`
+export const AboutText = styled.h3`
     font-size: 1.5em;
     margin-bottom: 1vh;
     text-align: justify;
@@ -73,8 +73,9 @@ export const Separator = styled.span`
     }
 `
 
-export const Word = styled.span`
+export const Word = styled.h3`
     margin-right: 1vw;
+    display: inline;
     font-size: 1.5em;
     font-weight: bold;
     @media screen and (max-device-width: 1200px){

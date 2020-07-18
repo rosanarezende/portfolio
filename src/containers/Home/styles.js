@@ -58,7 +58,7 @@ export const HomeContent = styled.div`
     }
 `
 
-export const Title = styled.p`
+export const Title = styled.h1`
     font-size: 5em;
     font-weight: bold;
     @media screen and (max-device-width: 1200px){
@@ -66,7 +66,7 @@ export const Title = styled.p`
     }
 `
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h2`
     font-size: 3em;
     margin: 1vh 0 6vh;
     @media screen and (max-device-width: 1200px){
@@ -74,7 +74,7 @@ export const SubTitle = styled.p`
     }
 `
 
-export const Text = styled.p`
+export const Text = styled.h3`
     font-size: 1.5em;
     @media screen and (max-device-width: 1200px){
         font-size: 1em;

@@ -11,12 +11,12 @@ export const HireMeContainer = styled.div`
     padding: 9vh 30vw;
     color: #ffffff;
     @media screen and (max-device-width: 1200px){
-        padding: 0 5vw;
+        padding: 5vh 5vw;
         min-height: 40vh;
     }
 `
 
-export const HireMeTitle = styled.p`
+export const HireMeTitle = styled.h2`
     font-size: 5em;
     font-weight: bold;
     margin-bottom: 6vh;
@@ -26,7 +26,7 @@ export const HireMeTitle = styled.p`
     }
 `
 
-export const Text = styled.div`
+export const Text = styled.p`
     text-align: center;
     font-size: 1.5em;
     margin-bottom: 1.5vh;
