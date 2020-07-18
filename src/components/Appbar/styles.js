@@ -36,7 +36,7 @@ export const SectionMobile = styled.div`
     }
 `
 
-export const LinksContainer = styled.div`
+export const LinksContainer = styled.nav`
     display: flex;
     align-items: center;
 

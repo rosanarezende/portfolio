@@ -12,7 +12,7 @@ export const EducationContainer = styled.div`
     }
 `
 
-export const Title = styled.div`
+export const Title = styled.h2`
     position: absolute;
     left: 43vw;
     top: 8vh;
@@ -62,7 +62,7 @@ export const Rigth = styled.div`
     }
 `
 
-export const SubTitle = styled.p`
+export const SubTitle = styled.h3`
     font-size: 2.5em;
     font-weight: bold;
     margin-bottom: 3vh;
@@ -79,7 +79,7 @@ export const Text = styled.div`
     }
 `
 
-export const Line = styled.div`
+export const Line = styled.p`
     margin-bottom: 1vh;
     @media screen and (max-device-width: 1200px){
         font-size: 1em;
